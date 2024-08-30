@@ -6,62 +6,62 @@ import Section from '../Section';
 export default function ImageBoxSlider() {
   const data = [
     {
-      src:'/images/product1.svg',
+      src:'/nftfish/images/product1.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product2.svg',
+      src:'/nftfish/images/product2.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product3.svg',
+      src:'/nftfish/images/product3.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product4.svg',
+      src:'/nftfish/images/product4.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product5.svg',
+      src:'/nftfish/images/product5.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product6.svg',
+      src:'/nftfish/images/product6.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product1.svg',
+      src:'/nftfish/images/product1.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product2.svg',
+      src:'/nftfish/images/product2.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product3.svg',
+      src:'/nftfish/images/product3.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product4.svg',
+      src:'/nftfish/images/product4.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product5.svg',
+      src:'/nftfish/images/product5.svg',
       href:'/', 
       alt:'Product',
     },
     {
-      src:'/images/product6.svg',
+      src:'/nftfish/images/product6.svg',
       href:'/', 
       alt:'Product',
     }
@@ -75,6 +75,8 @@ export default function ImageBoxSlider() {
     arrows: false,
     centerMode: true,
     centerPadding: "7%",
+    autoplay: true,        
+    autoplaySpeed: 1000,  
     responsive: [
       {
         breakpoint: 1600,

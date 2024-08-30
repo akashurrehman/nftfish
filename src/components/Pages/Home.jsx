@@ -1,19 +1,15 @@
 import React, { useEffect } from 'react'
 import { pageTitle } from '../../helper'
-//import Accordion from '../Accordion'
 import Card from '../Card'
 import ContactForm from '../ContactForm'
 import ContactInfo from '../ContactInfo'
 import FunFact from '../FunFact'
 import Hero from '../Hero'
-//import IconBox from '../IconBox'
 import Modal from '../Modal'
 import Section from '../Section'
 import SectionHeading from '../SectionHeading'
 import ImageBoxSlider from '../Slider/ImageBoxSlider'
-//import RoadmapSlider from '../Slider/RoadmapSlider'
 import Spacing from '../Spacing'
-//import Team from '../Team'
 
 export default function Home() {
   pageTitle('Home');
@@ -69,8 +65,8 @@ export default function Home() {
         mintPrice='0.02'
         mintDeathLine='22 July' 
         bgUrl='/images/hero_bg.jpeg'
-        heroImageUrl='/images/hero_img.svg' 
-        animatedUrl='/images/hero_img_sm.png' 
+        heroImageUrl='/nftfish/images/hero_img.svg' 
+        animatedUrl='/nftfish/images/hero_img_sm.png' 
         overlay='0.3'
         bgOpacity='0.4'
       />
@@ -95,38 +91,12 @@ export default function Home() {
               <Spacing lg='0' md='40'/>
             </Section>
             <Section className="col-lg-6">
-              <img src="/images/about_img.svg" alt="About" />
+              <img src="/nftfish/images/about_img.svg" alt="About" />
             </Section>
           </Section>
         </Section>
         <Spacing lg='100' md='70'/>
       </Section>
-      {/* <Section className="container">
-        <Section className="row">
-          <Section className="col-lg-4">
-            <IconBox 
-              title='Gaming NFTS' 
-              subtitle='There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
-            >01</IconBox>
-            <Spacing lg='25' md='25'/>
-          </Section>
-          <Section className="col-lg-4">
-            <IconBox 
-              title='Play To Earn' 
-              subtitle='There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
-            >02</IconBox>
-            <Spacing lg='25' md='25'/>
-          </Section>
-          <Section className="col-lg-4">
-            <IconBox 
-              iconNumber='02' 
-              title='Metaverse Ready' 
-              subtitle='There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.'
-            >03</IconBox>
-            <Spacing lg='25' md='25'/>
-          </Section>
-        </Section>
-      </Section> */}
       <Spacing lg='70' md='45'/>
       <ImageBoxSlider/>
       <Spacing lg='90' md='65'/>
@@ -200,136 +170,6 @@ export default function Home() {
           </Section>
         </Section>
       </Section>
-     {/*  <Section id='team'>
-        <Spacing lg='70' md='40'/>
-        <Section className="container">
-          <SectionHeading 
-            title='Meet The Team'
-            subtitle='Team'
-          />
-          <Spacing lg='50' md='30'/>
-          <Section className="row">
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member1.svg'
-                name='Jeffrey Robin' 
-                designation='UI Designer' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member2.svg'
-                name='Pamela Newborn' 
-                designation='FrontEnd engineer' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member3.svg'
-                name='Jeffrey Bassett' 
-                designation='Software engineer' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member4.svg'
-                name='Steven S. Cook' 
-                designation='Digital Marketing' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member5.svg'
-                name='Diane B. Lyons' 
-                designation='Digital Marketing' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member6.svg'
-                name='Nancy Riddell' 
-                designation='UI Designer' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member7.svg'
-                name='Helen Herman' 
-                designation='Product Designer' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-            <Section className="col-lg-3 col-sm-6">
-              <Team 
-                src='/images/member8.svg'
-                name='Lindsay Baker' 
-                designation='UI Designer' 
-                facebookHref='/' 
-                linkedinHref='/' 
-                whatsappHref='/'
-              />
-              <Spacing lg='25' md='25'/>
-            </Section>
-          </Section>
-        </Section>
-      </Section> */}
-{/*       <Section tag='section' id='roadmap'>
-        <Spacing lg='70' md='40'/>
-        <Section className="container">
-          <SectionHeading 
-            title='Roadmap Make Unique'
-            subtitle='Our Goals'
-          />
-          <Spacing lg='75' md='30'/>
-          <Section className="cs-accent_seperator_1 cs-accent_color"></Section>
-          <RoadmapSlider/>
-        </Section>
-      </Section> */}
-     {/*  <Section tag='section' id='faq'>
-        <Spacing lg='95' md='70'/>
-        <Section className="container">
-          <SectionHeading 
-            title='Still have questions?'
-            subtitle='FAQ'
-          />
-          <Spacing lg='50' md='30'/>
-          <Section className="row">
-            <Section className="col-lg-6">
-              <Accordion variant='' data={accordionData1} openPosition={0} questionNumberStarter={1}/>
-            </Section>
-            <Section className="col-lg-6">
-              <Accordion variant='' data={accordionData2} openPosition={false} questionNumberStarter={5}/>
-            </Section>
-          </Section>
-        </Section>
-      </Section> */}
       <Section id='contact'>
         <Spacing lg='95' md='70'/>
         <Section className="container">

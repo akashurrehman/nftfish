@@ -16,8 +16,8 @@ export default function Header() {
             <Section className="cs-main_header_in">
               <Section className="cs-main_header_left">
                 <Link to='/' className="cs-site_branding cs-accent_color">
-                  <img src="/images/logo.svg" alt="Logo" className="cs-hide_dark" />
-                  <img src="/images/logo_white.svg" alt="Logo" className="cs-hide_white" />
+                  <img src="/nftfish/images/logo.svg" alt="Logo" className="cs-hide_dark" />
+                  <img src="/nftfish/images/logo_white.svg" alt="Logo" className="cs-hide_white" />
                 </Link>
               </Section>
               <Section className="cs-main_header_center">
