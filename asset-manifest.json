@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/nftfish/static/css/main.3cf7906d.css",
-    "main.js": "/nftfish/static/js/main.edd3ccc0.js",
+    "main.js": "/nftfish/static/js/main.d085ed9a.js",
     "index.html": "/nftfish/index.html",
     "main.3cf7906d.css.map": "/nftfish/static/css/main.3cf7906d.css.map",
-    "main.edd3ccc0.js.map": "/nftfish/static/js/main.edd3ccc0.js.map"
+    "main.d085ed9a.js.map": "/nftfish/static/js/main.d085ed9a.js.map"
   },
   "entrypoints": [
     "static/css/main.3cf7906d.css",
-    "static/js/main.edd3ccc0.js"
+    "static/js/main.d085ed9a.js"
   ]
 }
