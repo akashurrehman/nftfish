@@ -1,0 +1,19 @@
+#moonPay .container {
+    background-color: #392a54;
+    padding: 20px;
+    text-align: center;
+}
+
+#moonPay button {
+    background-color: #7d00fe;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-image: url('https://images.crunchbase.com/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/jglje7ar0xc6j5lvai6t');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+}
