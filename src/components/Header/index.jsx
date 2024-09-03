@@ -31,6 +31,8 @@ export default function Header() {
                   <ul className="cs-nav_list" style={{display:`${mobileToggle?'block':'none'}`}}>
                     <li><ScrollLink to="hero" spy={true} smooth={true} offset={-80} duration={500} onClick={()=>navigate('/')}>Home</ScrollLink>
                     </li>
+                    <li><ScrollLink to="hero" spy={true} smooth={true} offset={-80} duration={500} onClick={()=>navigate('/dashboard')}>Dashboard</ScrollLink>
+                    </li>
                     <li><ScrollLink to="about" spy={true} smooth={true} offset={-80} duration={500} onClick={()=>setMobileToggle(false)}>About</ScrollLink></li>
                   {/*   <li><ScrollLink to="roadmap" spy={true} smooth={true} offset={-80} duration={500} onClick={()=>setMobileToggle(false)}>Roadmap</ScrollLink></li>
                     <li><ScrollLink to="team" spy={true} smooth={true} offset={-80} duration={500} onClick={()=>setMobileToggle(false)}>Team</ScrollLink></li>

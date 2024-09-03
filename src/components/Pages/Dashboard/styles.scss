@@ -1,0 +1,115 @@
+#dashboard .container {
+    background-image: url('./error-bg.png'); 
+    background-size: cover;
+    background-position: top bottom;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+  }
+  
+ #dashboard .card {
+  background-color: rgba(34, 34, 85, 0.85); // Transparent background for the card
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+#dashboard .card:hover {
+  transform: scale(1.05); 
+}
+
+#dashboard .card-img-top {
+  border-radius: 4px;
+}
+
+#dashboard .btn-primary {
+  background-color: #8a16f7; 
+  border: none;
+}
+
+#dashboard .btn-primary:hover {
+  background-color: #845baa !important; 
+  border: none;
+  transform: scale(1.05); 
+}
+
+#dashboard .btn-radius {
+  position: relative;
+  border-radius: 16px;
+  padding: 4px 14px;
+  background-color: #8a16f7;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #845baa;
+    transform: scale(1.05);
+  }
+
+  &.active {
+    background-color: #2563eb;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%) rotate(0deg);
+      border-width: 15px;
+      border-style: solid;
+      border-color: #eeeeee transparent transparent transparent; /* Arrow color */
+    }
+  }
+}
+
+#dashboard .btn-primary:hover {
+  background-color: #2563eb;
+}
+
+#dashboard .form-control {
+  background-color: transparent;
+  color:#FFF;
+}
+
+#dashboard .form-control::placeholder {
+  color:#FFF;
+}
+
+#dashboard .price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#dashboard .price-icon {
+  margin-right: 2px;
+}
+
+#dashboard .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  #dashboard .btn {
+    margin-bottom: 10px;
+  }
+
+  #dashboard .container {
+    padding: 15px;
+  }
+
+  #dashboard .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  #dashboard .container {
+    padding: 10px;
+  }
+
+  #dashboard .card {
+    margin-bottom: 15px;
+  }
+}
