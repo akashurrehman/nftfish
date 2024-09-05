@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './styles.scss';
-import axios from 'axios';
 
 const CardComponent = () => {
   const [activeButton, setActiveButton] = useState('All');
@@ -22,12 +21,17 @@ const CardComponent = () => {
           }
         };
 
-        const response = await fetch('https://api.opensea.io/api/v2/orders/ethereum/seaport/listings', options);
-        const data = await response.json();
-        setNFTs(data.orders); // Adjust according to your API response
-        setLoading(false);
+        const response = await fetch('https://api.opensea.io/api/v2/collection/puffy-vol-1/nfts?limit=20', options);
+        if (response.ok) {
+          const data = await response.json();
+          console.log('Fetched data:', data);
+          setNFTs(data.nfts); // This assumes the API response structure matches the provided example
+        } else {
+          console.error('Error fetching NFTs:', response.statusText);
+        }
       } catch (error) {
         console.error('Error fetching NFTs:', error);
+      } finally {
         setLoading(false);
       }
     };
@@ -87,20 +91,24 @@ const CardComponent = () => {
           </div>
         </div>
         <div className="row">
-          {nfts.map((nft, index) => (
-            <div className="col-lg-2 col-md-4 col-sm-6 col-12 mb-4" key={index}>
+          {nfts?.map((nft) => (
+            <div className="col-lg-2 col-md-4 col-sm-6 col-12 mb-4" key={nft.identifier}>
               <div className="card">
                 <img
-                  src={nft.maker_asset_bundle.assets[0]?.image_preview_url || 'https://via.placeholder.com/196x250'}
+                  src={nft?.display_image_url || 'https://via.placeholder.com/196x250'}
                   className="card-img-top"
-                  alt="NFT Thumbnail"
+                  alt={nft.name}
                 />
                 <div className="card-body text-center">
+                  {/* <h6 className="card-title">{nft.name}</h6> */}
                   <div className="price-container mb-2">
                     <span className="price-icon">💲</span>
-                    <span className="price">{nft.current_price / 1e18} ETH</span>
+                    {/* Assuming `current_price` is part of the NFT data */}
+                    <span className="price">30$</span>
                   </div>
-                  <button className="btn btn-primary w-100">Buy</button>
+                  <a href={nft.opensea_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary w-100">
+                    View on OpenSea
+                  </a>
                 </div>
               </div>
             </div>
