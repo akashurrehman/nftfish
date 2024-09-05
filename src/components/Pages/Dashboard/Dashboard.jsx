@@ -1,13 +1,43 @@
-import React, { useState } from 'react';
-import "./styles.scss";
+import React, { useState, useEffect } from 'react';
+import './styles.scss';
+import axios from 'axios';
 
 const CardComponent = () => {
   const [activeButton, setActiveButton] = useState('All');
-  const cards = new Array(18).fill(0); 
+  const [nfts, setNFTs] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const handleButtonClick = (buttonName) => {
     setActiveButton(buttonName);
   };
+
+  useEffect(() => {
+    const fetchNFTs = async () => {
+      try {
+        const options = {
+          method: 'GET',
+          headers: {
+            accept: 'application/json',
+            'x-api-key': '8e425732cd7c41e88d1ca22204a774b6'
+          }
+        };
+
+        const response = await fetch('https://api.opensea.io/api/v2/orders/ethereum/seaport/listings', options);
+        const data = await response.json();
+        setNFTs(data.orders); // Adjust according to your API response
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching NFTs:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchNFTs();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div id="dashboard">
@@ -57,18 +87,18 @@ const CardComponent = () => {
           </div>
         </div>
         <div className="row">
-          {cards.map((_, index) => (
+          {nfts.map((nft, index) => (
             <div className="col-lg-2 col-md-4 col-sm-6 col-12 mb-4" key={index}>
               <div className="card">
                 <img
-                  src="https://via.placeholder.com/196x250"
+                  src={nft.maker_asset_bundle.assets[0]?.image_preview_url || 'https://via.placeholder.com/196x250'}
                   className="card-img-top"
-                  alt="Game Thumbnail"
+                  alt="NFT Thumbnail"
                 />
                 <div className="card-body text-center">
                   <div className="price-container mb-2">
                     <span className="price-icon">💲</span>
-                    <span className="price">19.99</span>
+                    <span className="price">{nft.current_price / 1e18} ETH</span>
                   </div>
                   <button className="btn btn-primary w-100">Buy</button>
                 </div>
